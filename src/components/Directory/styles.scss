@@ -1,0 +1,54 @@
+.directory{
+    height: 100%;
+   
+
+    .wrap {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+       
+    }
+    .item{
+        width: 50%;
+        height: 100%;
+        float: left;
+        //background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        & ::after {
+            content: '';
+            top: 0; 
+            left: 0;
+            background-color: rgba(0, 0, 0, 3);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        a {
+            position: relative;
+            top: 50%; left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            font-size: 2rem;
+            line-height: 1;
+            font-weight: 400;
+            text-transform: uppercase;
+            //background-color: rgb(223, 70, 70);
+            cursor: pointer;
+            border-radius: 16px;
+            padding: 8px 10px;
+            background: #a8ff78;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+        a:hover{
+            background: #FDC830;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
+        }
+    }
+}
