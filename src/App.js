@@ -1,7 +1,10 @@
 import React from 'react'
+import {Route} from 'react-router-dom'
+
 import Header from './components/Header'
-import './default.scss'
 import Homepage from './pages/Homepage'
+import Registration from './pages/Registration'
+import './default.scss'
 
 
 function App() {
@@ -9,7 +12,8 @@ function App() {
     <div className="App">
         <Header />
       <div className="main">
-        <Homepage />
+        <Route path="/" component={Homepage} />
+        <Route path="/registration" component={Registration} />        
       </div>
     </div>
   );
