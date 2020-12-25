@@ -2,13 +2,21 @@ html {
   font-size: 10px;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
+html,
+body {
   padding: 0;
+  margin: 0;
 }
 
-* {
+html,
+body,
+#root,
+.App,
+.fullHeight {
+  height: 100vh;
+}
+
+*, ::before, ::after {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -16,5 +24,23 @@ html, body {
 body {
   font-family: 'Noto Sans JP', sans-serif;
   font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a, a:hover {
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.main {
+  height: calc(100% - 6.5rem);
+  max-width: 1450px;
+  padding: 0 2px;
 }
 /*# sourceMappingURL=default.css.map */
