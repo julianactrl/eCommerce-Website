@@ -1,7 +1,12 @@
 import React from 'react'
-import {Route} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 
-import Header from './components/Header'
+
+//Layouts
+import MainLayout from './layouts/MainLayouts'
+import HomepageLayout from './layouts/MainLayouts'
+
+//Pages
 import Homepage from './pages/Homepage'
 import Registration from './pages/Registration'
 import './default.scss'
@@ -10,10 +15,19 @@ import './default.scss'
 function App() {
   return (
     <div className="App">
-        <Header />
       <div className="main">
-        <Route path="/" component={Homepage} />
-        <Route path="/registration" component={Registration} />        
+        <Switch>
+          <Route exact path="/" render={() => (
+            <HomepageLayout>
+              <Homepage />
+            </HomepageLayout>
+          )} />
+          <Route path="/registration" render={() => (
+            <MainLayout>
+              <Registration />
+            </MainLayout>
+          )} />        
+        </Switch>
       </div>
     </div>
   );

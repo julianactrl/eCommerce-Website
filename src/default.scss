@@ -11,7 +11,8 @@ body{
 html,
 body,
 #root,
-.App{
+.App,
+.fullHeight{
     height: 100%;
 }
 
@@ -30,12 +31,12 @@ body{
 
 a {
     text-decoration: none;
+    color: black;
 }
 a, a:hover{
     -webkit-transition: all .4s ease-in-out;
     -moz-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
-    
 }
 
 .main {
@@ -44,8 +45,5 @@ a, a:hover{
     max-width: 1450px;
     padding: 0 10px;
     margin: 0 auto;
-    background: #FFEFBA;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    
 }
